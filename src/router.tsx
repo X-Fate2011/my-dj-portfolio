@@ -1,8 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import RootLayout from "./layouts/RootLayout";
 import App from './pages/App.tsx';
-
-//import MixesPage from "./pages/MixesPage";
+import MixesPage from "./pages/MixesPage.tsx";
 
 export const router = createBrowserRouter([
     {
@@ -10,7 +9,7 @@ export const router = createBrowserRouter([
         element: <RootLayout />,
         children: [
             { path: "/", element: <App /> },
-            //{ path: "/mixes", element: <MixesPage /> },
+            { path: "/mixes", element: <MixesPage /> },
         ],
     },
 ]);
