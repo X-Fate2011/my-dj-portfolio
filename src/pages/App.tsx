@@ -4,7 +4,7 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons'
 // @ts-ignore
 import xfate from '/x-fate.JPG';
 import './App.css'
-import MixcloudFeed from "../components/MixcloudFeed.tsx";
+import MixcloudFeedHome from "../components/MixcloudFeedHome.tsx";
 import TwitchStream from "../components/TwitchStream.tsx";
 
 function App() {
@@ -53,7 +53,7 @@ function App() {
                     </div>
                 </div>
                 <div className="flex flex-col lg:flex-row w-full">
-                    <MixcloudFeed/>
+                    <MixcloudFeedHome/>
                     <TwitchStream/>
                 </div>
             
