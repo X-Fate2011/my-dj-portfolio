@@ -9,12 +9,12 @@ function AboutMePage() {
                 <img src={xfate2} alt="X-Fate auf der Ruhr In Love 2023"
                      className="sepia h-full w-full shadow-md object-cover object-[100%_48%]"/>
                 <blockquote
-                    className="absolute bottom-4 left-1/2 w-full md:w-auto -translate-x-1/2 md:translate-0 md:left-4 bg-black/75 text-white p-4 rounded-xl max-w-md text-lg italic">
+                    className="absolute bottom-4 left-1/2 w-full md:w-auto -translate-x-1/2 md:translate-0 md:left-4 bg-black/75 text-white p-4 rounded-xl max-w-md  text-base lg:text-lg xl:text-xl italic">
                     „Musik ist die stärkste Form der Magie.“
-                    <cite className="block mt-2 text-sm not-italic text-gray-300">– Marilyn Manson</cite>
+                    <cite className="block mt-2 text-sm lg:text-md xl:text-lg not-italic text-gray-300">– Marilyn Manson</cite>
                 </blockquote>
             </div>
-            <div className="max-w-auto md:max-w-[75vw] lg:max-w-[60vw] flex flex-col items-center m-4">
+            <div className="max-w-auto lg:max-w-[75vw] xl:max-w-[60vw] flex flex-col items-center m-4">
                 <div className="m-4 w-full">
                     <h2 className="text-3xl font-bold mb-4 md:mb-auto">Über mich</h2>
                     <div className="flex flex-col md:flex-row-reverse justify-around w-full text-base lg:text-lg xl:text-xl">
@@ -89,7 +89,7 @@ function AboutMePage() {
                             </ul>
                         </div>
                         
-                        <blockquote className="relative w-full md:w-[300px] mt-8 md:my-auto p-6 bg-gray/100 rounded-xl text-white italic">
+                        <blockquote className="relative w-full md:w-[300px] mt-8 md:mr-8 md:my-auto p-6 bg-gray/100 rounded-xl text-white italic">
                             <span className="absolute bottom-4 -left-2 text-6xl text-white">„</span>
                             „Ich liebe es, wenn Menschen mit meiner Musik mitgehen – das gibt mir unendlich viel zurück.“
                             <span className="absolute -top-4 -right-2 text-6xl text-white">“</span>
@@ -99,7 +99,7 @@ function AboutMePage() {
                 <div className="m-4 md:m-8 w-full">
                     <h2 className="text-3xl font-bold mb-4">Was mich antreibt</h2>
                     <div className="flex flex-col md:flex-row justify-around items-center w-full text-base lg:text-lg xl:text-xl">
-                        <p className="mb-4 md:m-8 lg:w-1/2">
+                        <p className="mb-4 md:m-8 md:w-1/2">
                             Musik ist für mich mehr als Klang. Sie ist Emotion, Verbindung und Energie zugleich.
                             Jeder Mix erzählt eine Geschichte, und jedes Set ist für mich eine Reise – für mich und für die, die zuhören.
                             Umso mehr freut es mich zu sehen (und auch via Chat zu lesen), wenn die Leute mit mir feiern!
