@@ -1,5 +1,7 @@
 // @ts-ignore
 import xfate2 from '/x-fate2.JPG';
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function AboutMePage() {
     
@@ -89,7 +91,8 @@ function AboutMePage() {
                             </ul>
                         </div>
                         
-                        <blockquote className="relative w-full md:w-[300px] mt-8 md:mr-8 md:my-auto p-6 bg-gray/100 rounded-xl text-white italic">
+                        <blockquote
+                            className="relative w-full md:w-[300px] mt-8 md:mr-8 md:my-auto p-6 bg-gray/100 rounded-xl text-white italic">
                             <span className="absolute bottom-4 -left-2 text-6xl text-white">„</span>
                             „Ich liebe es, wenn Menschen mit meiner Musik mitgehen – das gibt mir unendlich viel zurück.“
                             <span className="absolute -top-4 -right-2 text-6xl text-white">“</span>
@@ -110,6 +113,21 @@ function AboutMePage() {
                             <span className="absolute -top-4 -right-2 text-6xl text-white">“</span>
                         </blockquote>
                     </div>
+                </div>
+                <div aria-labelledby="kontakt" className="m-4 md:m-8 w-full">
+                    <h2 className="text-3xl font-bold mb-4">Kontakt</h2>
+                    <p className="text-gray-300 mb-4 text-base lg:text-lg xl:text-xl">
+                        Du hast Fragen, Booking-Anfragen oder willst einfach nur connecten? Dann lass mir einen Follow auf Instagram da oder schreib mir einfach eine
+                    </p>
+                    <a
+                        href="https://www.instagram.com/x_fate/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex flex-row items-center gap-3 px-6 py-3 bg-pink-600 text-white font-medium rounded-full shadow-md hover:bg-pink-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 transition"
+                        aria-label="Kontaktiere X-Fate über Instagram Direktnachricht"
+                    >
+                        <FontAwesomeIcon icon={faInstagram} size="2x"/> DM auf Instagram
+                    </a>
                 </div>
             </div>
         </section>

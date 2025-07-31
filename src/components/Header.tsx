@@ -43,7 +43,6 @@ const Header = () => {
                     <NavLink to="/" className={({isActive}) => isActive ? "font-bold underline" : ""}>Start</NavLink>
                     <NavLink to="/mixes" className={({isActive}) => isActive ? "font-bold underline" : ""}>Mixes</NavLink>
                     <NavLink to="/about" className={({isActive}) => isActive ? "font-bold underline" : ""}>Über mich</NavLink>
-                    <NavLink to="/kontakt" className={({isActive}) => isActive ? "font-bold underline" : ""}>Kontakt</NavLink>
                 </nav>
             </div>
             
@@ -72,10 +71,9 @@ const Header = () => {
                         <FontAwesomeIcon icon={faXmark} size="lg"/>
                     </button>
                     
-                    <NavLink to="/" onClick={() => setIsOpen(false)}>Start</NavLink>
-                    <NavLink to="/mixes" onClick={() => setIsOpen(false)}>Mixes</NavLink>
-                    <NavLink to="/about" onClick={() => setIsOpen(false)}>Über mich</NavLink>
-                    <NavLink to="/kontakt" onClick={() => setIsOpen(false)}>Kontakt</NavLink>
+                    <NavLink to="/" className={({isActive}) => isActive ? "font-bold underline" : ""} onClick={() => setIsOpen(false)}>Start</NavLink>
+                    <NavLink to="/mixes" className={({isActive}) => isActive ? "font-bold underline" : ""} onClick={() => setIsOpen(false)}>Mixes</NavLink>
+                    <NavLink to="/about" className={({isActive}) => isActive ? "font-bold underline" : ""} onClick={() => setIsOpen(false)}>Über mich</NavLink>
                 </div>
             </aside>
         </header>
