@@ -41,9 +41,9 @@ const Header = () => {
                 {/* Desktop Navigation */}
                 <nav className="hidden sm:flex gap-6" aria-label="Hauptnavigation">
                     <NavLink to="/" className={({isActive}) => isActive ? "font-bold underline" : ""}>Start</NavLink>
-                    <NavLink to="/mixes">Mixes</NavLink>
-                    <NavLink to="/about">Über mich</NavLink>
-                    <NavLink to="/kontakt">Kontakt</NavLink>
+                    <NavLink to="/mixes" className={({isActive}) => isActive ? "font-bold underline" : ""}>Mixes</NavLink>
+                    <NavLink to="/about" className={({isActive}) => isActive ? "font-bold underline" : ""}>Über mich</NavLink>
+                    <NavLink to="/kontakt" className={({isActive}) => isActive ? "font-bold underline" : ""}>Kontakt</NavLink>
                 </nav>
             </div>
             
