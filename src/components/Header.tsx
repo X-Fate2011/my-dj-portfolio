@@ -60,10 +60,9 @@ const Header = () => {
                 className={`fixed top-0 right-0 w-full h-full bg-header text-white z-50 transform transition-transform duration-300 ease-in-out ${
                     isOpen ? "translate-x-0" : "translate-x-full"
                 }`}
-                role="dialog"
-                aria-modal="true"
+                aria-label="Mobile Navigation"
             >
-                <div className="p-6 flex flex-col gap-6">
+                <div role="dialog" aria-modal="true" aria-label="Mobile Navigation" className="p-6 flex flex-col gap-6">
                     <button className="self-end text-white hover:text-gray-300"
                             onClick={() => setIsOpen(false)}
                             aria-label="Menü schließen">

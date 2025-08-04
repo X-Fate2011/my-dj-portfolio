@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  --color-header: #f44336;
+  --color-header: #d32f2f;
   --breakpoint-xl: 81rem;
 }
 

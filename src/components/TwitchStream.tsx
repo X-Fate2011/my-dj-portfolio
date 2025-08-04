@@ -7,6 +7,7 @@ export default function TwitchStream() {
                 src={`https://player.twitch.tv/?channel=truededicationmusic&parent=${parentUrl}`}
                 className="w-full h-full"
                 loading="lazy"
+                title="Twitch Stream von TrueDedicationMusic"
                 allowFullScreen>
             </iframe>
         </div>
