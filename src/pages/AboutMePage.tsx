@@ -1,5 +1,3 @@
-// @ts-ignore
-import xfate2 from '/x-fate2.JPG';
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -7,9 +5,21 @@ function AboutMePage() {
     
     return (
         <section className="flex flex-col items-center">
-            <div className="w-full h-[200px] md:h-[500px] lg:h-[600px] overflow-hidden relative">
-                <img src={xfate2} alt="X-Fate auf der Ruhr In Love 2023"
-                     className="sepia h-full w-full shadow-md object-cover object-[100%_48%]"/>
+            <div className="w-full h-[200px] md:h-[500px] lg:h-[500px] xl:h-[600px] overflow-hidden relative">
+                <picture>
+                    <source
+                        srcSet="/x-fate2_480.webp 480w, /x-fate2_1280.webp 1280w, /x-fate2.webp 1920w"
+                        type="image/webp"
+                        sizes="100vw"
+                    />
+                    <img
+                        src="/x-fate_1280.webp"
+                        alt="X-Fate auf der Ruhr In Love 2023"
+                        className="sepia h-full w-full shadow-md object-cover object-[100%_48%]"
+                        loading="eager"
+                        decoding="async"
+                    />
+                </picture>
                 <blockquote
                     className="absolute bottom-4 left-1/2 w-full md:w-auto -translate-x-1/2 md:translate-0 md:left-4 bg-black/75 text-white p-4 rounded-xl max-w-md  text-base lg:text-lg xl:text-xl italic">
                     „Musik ist die stärkste Form der Magie.“
