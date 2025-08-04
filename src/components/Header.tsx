@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
-import xfateLogo from "../assets/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Header = () => {
@@ -22,7 +21,7 @@ const Header = () => {
                 {/* Logo */}
                 <h1 className="text-xl font-bold">
                     <Link to="/" aria-label="X-Fate – Zur Startseite">
-                        <img src={xfateLogo} alt="X-Fate Logo" className="h-10 w-auto"/>
+                        <img src="/logo.webp" alt="X-Fate Logo" className="h-10 w-auto"/>
                     </Link>
                 </h1>
                 
