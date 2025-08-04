@@ -1,8 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitch } from '@fortawesome/free-brands-svg-icons'
 import { faPlay } from '@fortawesome/free-solid-svg-icons'
-// @ts-ignore
-import xfate from '/x-fate.JPG';
 import './App.css'
 import MixcloudFeedHome from "../components/MixcloudFeedHome.tsx";
 import TwitchStream from "../components/TwitchStream.tsx";
@@ -12,18 +10,30 @@ function App() {
     return (
         <>
             <section className="flex flex-col">
-                <div className="flex flex-col lg:flex-row mb-4 lg:m-8">
+                <div className="flex flex-col lg:flex-row mb-4 lg:m-8 h-[450px] md:h-[350px] lg:h-[450px]">
                     {/* Overlay */}
                     
-                    <div
-                        className="relative bg-cover bg-top md:bg-position-[center_top_-8rem] bg-no-repeat min-h-[450px] md:min-h-[300px] w-full lg:min-h-[500px] min-w-1/2 lg:w-1/2 mx-auto lg:rounded-2xl"
-                        style={{backgroundImage: `url(${xfate})`}}>
+                    <div className="relative w-full overflow-hidden">
+                        <picture>
+                            <source
+                                srcSet="/x-fate_480.webp 480w, /x-fate_1280.webp 1280w, /x-fate.webp 1920w"
+                                type="image/webp"
+                                sizes="100vw"
+                            />
+                            <img
+                                src="/x-fate_1280.webp"
+                                alt="X-Fate"
+                                className="w-full h-full object-cover object-top rounded-none lg:rounded-2xl"
+                                loading="eager"
+                                decoding="async"
+                            />
+                        </picture>
                         <div className="absolute inset-0 bg-white/75 h-full z-10 lg:hidden" aria-hidden="true"/>
                     </div>
                     
                     {/* Content */}
-                    <div className="flex flex-col absolute lg:relative justify-between lg:ml-8 z-20 lg:h-[500px]">
-                        <div className="p-4 lg:p-6 xl:p-8 lg:mb-8 bg-transparent lg:bg-white lg:rounded-2xl text-black max-w-full mx-auto">
+                    <div className="flex flex-col absolute lg:relative justify-between lg:ml-8 z-20">
+                        <div className="p-4 lg:p-6 xl:p-8 lg:mb-8 bg-transparent lg:bg-white lg:rounded-2xl text-black max-w-full">
                             <h2 className="text-xl lg:text-2xl xl:text-3xl font-bold mb-2 lg:mb-4">Sound. Energie. Emotion. Passion.</h2>
                             <p className="text-base lg:text-lg xl:text-xl">
                                 Mein Name ist X-Fate und ich mixe seit 2011 elektronische Musik – von den ersten Beats im Webradio über
@@ -36,7 +46,7 @@ function App() {
                             </p>
                         </div>
                         
-                        <div className="p-4 lg:p-6 xl:p-8 bg-transparent lg:bg-white lg:rounded-2xl text-black max-w-full z-20 mx-auto">
+                        <div className="p-4 lg:p-6 xl:p-8 bg-transparent lg:bg-white lg:rounded-2xl text-black max-w-full z-20">
                             <h2 className="text-xl lg:text-2xl xl:text-3xl font-bold mb-2 lg:mb-4">Kommende Shows</h2>
                             <p className="text-base lg:text-lg xl:text-xl">
                                 Jeden Dienstag um 20:00 Uhr – im Wechsel Webradio &amp; Twitch.
