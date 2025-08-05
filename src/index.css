@@ -71,3 +71,20 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.imprint h1, .imprint h2, .imprint h3, .imprint h4, .imprint h5, .imprint h6,
+.privacy h1, .privacy h2, .privacy h3, .privacy h4, .privacy h5, .privacy h6 {
+  @apply font-bold my-4;
+}
+
+h1 {
+  @apply text-2xl;
+}
+
+h2 {
+  @apply text-xl lg:text-2xl xl:text-3xl font-bold mb-2 lg:mb-4;
+}
+
+h3 {
+  @apply text-lg;
+}

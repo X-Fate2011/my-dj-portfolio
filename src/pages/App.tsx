@@ -34,7 +34,7 @@ function App() {
                     {/* Content */}
                     <div className="flex flex-col absolute lg:relative justify-between lg:ml-8 z-20">
                         <div className="p-4 lg:p-6 xl:p-8 lg:mb-8 bg-transparent lg:bg-white lg:rounded-2xl text-black max-w-full">
-                            <h2 className="text-xl lg:text-2xl xl:text-3xl font-bold mb-2 lg:mb-4">Sound. Energie. Emotion. Passion.</h2>
+                            <h2>Sound. Energie. Emotion. Passion.</h2>
                             <p className="text-base lg:text-lg xl:text-xl">
                                 Mein Name ist X-Fate und ich mixe seit 2011 elektronische Musik – von den ersten Beats im Webradio über
                                 Festivalbühnen
@@ -47,7 +47,7 @@ function App() {
                         </div>
                         
                         <div className="p-4 lg:p-6 xl:p-8 bg-transparent lg:bg-white lg:rounded-2xl text-black max-w-full z-20">
-                            <h2 className="text-xl lg:text-2xl xl:text-3xl font-bold mb-2 lg:mb-4">Kommende Shows</h2>
+                            <h2>Kommende Shows</h2>
                             <p className="text-base lg:text-lg xl:text-xl">
                                 Jeden Dienstag um 20:00 Uhr – im Wechsel Webradio &amp; Twitch.
                                 Schau vorbei und sei live dabei!

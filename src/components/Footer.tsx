@@ -1,9 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faMixcloud, faTwitch } from '@fortawesome/free-brands-svg-icons'
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <footer className="bg-transparent text-white py-8 mt-16 z-20" role="contentinfo">
+        <footer className="bg-transparent text-white py-8 z-20" role="contentinfo">
             <div className="px-4 flex flex-col lg:flex-row items-center justify-center gap-4">
                 
                 {/* Social Links */}
@@ -39,6 +40,12 @@ const Footer = () => {
                 
                 {/* © Info */}
                 <p className="text-sm text-gray-400">&copy; {new Date().getFullYear()} X-Fate. Alle Rechte vorbehalten.</p>
+                
+                {/* © Legal stuff */}
+                <nav aria-label="Rechtliches" className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
+                    <NavLink to="/imprint" className="hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white">Impressum</NavLink>
+                    <NavLink to="/privacy" className="hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white">Datenschutzerklärung</NavLink>
+                </nav>
             </div>
         </footer>
     

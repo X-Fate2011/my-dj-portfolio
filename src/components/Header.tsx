@@ -19,7 +19,7 @@ const Header = () => {
             <div className="mx-auto max-w-full px-4 py-4 flex items-center justify-between">
                 
                 {/* Logo */}
-                <h1 className="text-xl font-bold">
+                <h1>
                     <Link to="/" aria-label="X-Fate – Zur Startseite">
                         <img src="/logo.webp" alt="X-Fate Logo" className="h-10 w-auto"/>
                     </Link>

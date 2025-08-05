@@ -28,7 +28,7 @@ function AboutMePage() {
             </div>
             <div className="max-w-auto lg:max-w-[75vw] xl:max-w-[60vw] flex flex-col items-center m-4">
                 <div className="m-4 w-full">
-                    <h2 className="text-3xl font-bold mb-4 md:mb-auto">Über mich</h2>
+                    <h2>Über mich</h2>
                     <div className="flex flex-col md:flex-row-reverse justify-around w-full text-base lg:text-lg xl:text-xl">
                         <p className="mb-4 md:m-8 lg:w-1/2">
                             Seit 2011 bin ich als DJ aktiv. Angefangen hat alles bei GlobalBase.FM, einem kleinen Webradio, bei dem ich
@@ -53,7 +53,7 @@ function AboutMePage() {
                     </div>
                 </div>
                 <div className="m-4 md:m-8 w-full">
-                    <h2 className="text-3xl font-bold mb-4 md:mb-auto">Sendungen & Streaming</h2>
+                    <h2>Sendungen & Streaming</h2>
                     <div className="flex flex-col md:flex-row justify-around items-center w-full text-base lg:text-lg xl:text-xl">
                         <ul className="text-left md:m-8 lg:w-1/2">
                             <li><span className="font-bold">2015–2022:</span> Wöchentliche Show auf rm.fm/house</li>
@@ -76,7 +76,7 @@ function AboutMePage() {
                     </div>
                 </div>
                 <div className="m-4 md:m-8 w-full">
-                    <h2 className="text-3xl font-bold mb-4">Live-Auftritte</h2>
+                    <h2>Live-Auftritte</h2>
                     <div className="flex flex-col md:flex-row-reverse justify-around items-center w-full text-base lg:text-lg xl:text-xl">
                         <div className="text-left">
                             <p className="font-bold">World Club Dome</p>
@@ -110,7 +110,7 @@ function AboutMePage() {
                     </div>
                 </div>
                 <div className="m-4 md:m-8 w-full">
-                    <h2 className="text-3xl font-bold mb-4">Was mich antreibt</h2>
+                    <h2>Was mich antreibt</h2>
                     <div className="flex flex-col md:flex-row justify-around items-center w-full text-base lg:text-lg xl:text-xl">
                         <p className="mb-4 md:m-8 md:w-1/2">
                             Musik ist für mich mehr als Klang. Sie ist Emotion, Verbindung und Energie zugleich.
@@ -125,7 +125,7 @@ function AboutMePage() {
                     </div>
                 </div>
                 <div aria-labelledby="kontakt" className="m-4 md:m-8 w-full">
-                    <h2 className="text-3xl font-bold mb-4">Kontakt</h2>
+                    <h2>Kontakt</h2>
                     <p className="text-gray-300 mb-4 text-base lg:text-lg xl:text-xl">
                         Du hast Fragen, Booking-Anfragen oder willst einfach nur connecten? Dann lass mir einen Follow auf Instagram da oder schreib mir einfach eine
                     </p>
