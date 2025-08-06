@@ -1,0 +1,19 @@
+import { useEffect, useState } from "react";
+
+export default function CookieOverlay({visible}: { visible: boolean }) {
+    const [show, setShow] = useState(visible);
+    
+    useEffect(() => {
+        if (visible) setShow(true);
+        else setTimeout(() => setShow(false), 300); // Fade-out delay
+    }, [visible]);
+    
+    return show ? (
+        <div
+            className={`
+        fixed inset-0 bg-black transition-opacity duration-300 z-99
+        ${visible ? "opacity-50 pointer-events-auto" : "opacity-0 pointer-events-none"}
+      `}
+        />
+    ) : null;
+}
