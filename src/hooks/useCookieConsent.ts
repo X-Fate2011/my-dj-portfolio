@@ -11,8 +11,8 @@ export function useCookieConsent(cookieName: string = "siteConsent") {
             setConsentGiven(getCookieConsentValue(cookieName) === "true");
         };
         
-        window.addEventListener("storage", handleStorageChange);
-        return () => window.removeEventListener("storage", handleStorageChange);
+        window.addEventListener("cookie-consent-change", handleStorageChange);
+        return () => window.removeEventListener("cookie-consent-change", handleStorageChange);
     }, [cookieName]);
     
     return consentGiven;

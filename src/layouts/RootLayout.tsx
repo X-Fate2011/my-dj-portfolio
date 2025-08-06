@@ -10,7 +10,10 @@ const RootLayout = () => {
     const consentGiven = useCookieConsent();
     const [showBanner, setShowBanner] = useState(!consentGiven);
     
-    const handleAccept = () => setShowBanner(false);
+    const handleAccept = () => {
+        setShowBanner(false);
+        window.dispatchEvent(new Event("cookie-consent-change"));
+    };
     const handleDecline = () => setShowBanner(false);
     
     return (
