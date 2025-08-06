@@ -4,18 +4,17 @@ import Footer from "../components/Footer";
 import { useState } from "react";
 import CookieOverlay from "../components/CookieOverlay.tsx";
 import CookieBanner from "../components/CookieBanner.tsx";
-import { getCookieConsentValue } from "react-cookie-consent";
+import { useCookieConsent } from "../hooks/useCookieConsent.ts";
 
 const RootLayout = () => {
-    const cookiesAccepted = getCookieConsentValue("siteConsent");
-    const [showBanner, setShowBanner] = useState(cookiesAccepted !== "true");
+    const consentGiven = useCookieConsent();
+    const [showBanner, setShowBanner] = useState(!consentGiven);
     
     const handleAccept = () => setShowBanner(false);
     const handleDecline = () => setShowBanner(false);
     
     return (
         <>
-            
             <div className="flex min-h-screen flex-col">
                 <Header/>
                 

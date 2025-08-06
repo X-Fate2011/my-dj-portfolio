@@ -1,10 +1,16 @@
 import MixcloudPlayer from "../components/MixcloudPlayer.tsx";
+import { useCookieConsent } from "../hooks/useCookieConsent.ts";
 
 function MixesPage() {
-    
+    const consentGiven = useCookieConsent();
     return (
         <div className="p-4 md:p-6 lg:p-8">
-            <MixcloudPlayer limit={10} showLoadMoreButton={true} variant="list"/>
+            {consentGiven ? (<MixcloudPlayer limit={10} showLoadMoreButton={true} variant="list"/>) :
+                (
+                    <>
+                        <p>Bitte akzeptiere die Cookies, um den Mixcloud-Feed sehen zu können.</p>
+                    </>
+                )}
         </div>
     )
 }
