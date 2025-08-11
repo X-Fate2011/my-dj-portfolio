@@ -15,6 +15,7 @@ const Footer = () => {
                         rel="noopener noreferrer"
                         className="hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
                         aria-label="X-Fate auf Instagram"
+                        tabIndex={0}
                     >
                         <FontAwesomeIcon icon={faInstagram} size="2x"/>
                     </a>
@@ -24,27 +25,29 @@ const Footer = () => {
                         rel="noopener noreferrer"
                         className="hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
                         aria-label="X-Fate auf Mixcloud"
+                        tabIndex={1}
                     >
                         <FontAwesomeIcon icon={faMixcloud} size="2x"/>
                     </a>
                     <a
-                        href="https://www.mixcloud.com/truededicatinmusic"
+                        href="https://www.mixcloud.com/truededicationmusic"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
                         aria-label="TrueDedicationMusic auf Twitch"
+                        tabIndex={2}
                     >
                         <FontAwesomeIcon icon={faTwitch} size="2x"/>
                     </a>
                 </nav>
                 
                 {/* © Info */}
-                <p className="text-sm text-gray-400">&copy; {new Date().getFullYear()} X-Fate. Alle Rechte vorbehalten.</p>
+                <p aria-label="Copyright Info" className="text-sm text-gray-400">&copy; {new Date().getFullYear()} X-Fate. Alle Rechte vorbehalten.</p>
                 
                 {/* © Legal stuff */}
                 <nav aria-label="Rechtliches" className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
-                    <NavLink to="/imprint" className="hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white">Impressum</NavLink>
-                    <NavLink to="/privacy" className="hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white">Datenschutzerklärung</NavLink>
+                    <NavLink tabIndex={3} aria-label="Impressum" rel="noopener noreferrer" to="/imprint" className="hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white">Impressum</NavLink>
+                    <NavLink tabIndex={4} aria-label="Datenschutzerklärung" rel="noopener noreferrer" to="/privacy" className="hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white">Datenschutzerklärung</NavLink>
                 </nav>
             </div>
         </footer>
