@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useState } from "react";
-import CookieOverlay from "../components/CookieOverlay.tsx";
+import CookieOverlay from "../components/CookieOverlay/CookieOverlay.tsx";
 import CookieBanner from "../components/CookieBanner/CookieBanner.tsx";
 import { useCookieConsent } from "../hooks/useCookieConsent.ts";
 
