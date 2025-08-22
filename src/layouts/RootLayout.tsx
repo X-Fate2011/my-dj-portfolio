@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
-import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import { useState } from "react";
 import CookieOverlay from "../components/CookieOverlay/CookieOverlay.tsx";
 import CookieBanner from "../components/CookieBanner/CookieBanner.tsx";
 import { useCookieConsent } from "../hooks/useCookieConsent.ts";
+import Header from "../components/Header";
 
 const RootLayout = () => {
     const consentGiven = useCookieConsent();
