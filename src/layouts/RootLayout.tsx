@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import Header from "../components/Header";
+import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import { useState } from "react";
 import CookieOverlay from "../components/CookieOverlay/CookieOverlay.tsx";
