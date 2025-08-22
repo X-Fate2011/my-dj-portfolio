@@ -30,7 +30,7 @@ const Footer = () => {
                         <FontAwesomeIcon icon={faMixcloud} size="2x"/>
                     </a>
                     <a
-                        href="https://www.mixcloud.com/truededicationmusic"
+                        href="https://twitch.tv/truededicationmusic"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
