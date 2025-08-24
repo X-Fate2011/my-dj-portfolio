@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { useIsDesktop } from "../../hooks/useIsDesktop";
 
 type ShowItem = {
     key: string;
@@ -70,22 +71,7 @@ const MixcloudPlayer: React.FC<MixcloudPlayerProps> = ({
             .join(" ");
     }
     
-    function useIsDesktop(breakpoint = 1280) {
-        const [isDesktop, setIsDesktop] = useState(() => window.innerWidth >= breakpoint);
-        
-        useEffect(() => {
-            const mediaQuery = window.matchMedia(`(min-width: ${breakpoint}px)`);
-            const update = (e: MediaQueryListEvent) => setIsDesktop(e.matches);
-            
-            mediaQuery.addEventListener("change", update);
-            setIsDesktop(mediaQuery.matches); // initial
-            return () => mediaQuery.removeEventListener("change", update);
-        }, [breakpoint]);
-        
-        return isDesktop;
-    }
-    
-    const isDesktop = useIsDesktop(); // oder z.B. useIsDesktop(768) für Tablet-Marke
+    const isDesktop = useIsDesktop();
     const hideArtwork = isDesktop ? "1" : "0";
     
     return (
