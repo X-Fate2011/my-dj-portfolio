@@ -1,4 +1,4 @@
-import MixcloudPlayer from "../components/MixcloudPlayer.tsx";
+import MixcloudPlayer from "../components/MixcloudPlayer/MixcloudPlayer.tsx";
 import { useCookieConsent } from "../hooks/useCookieConsent.ts";
 
 function MixesPage() {
