@@ -1,0 +1,13 @@
+{
+    "navAriaLabel": "Social Media",
+    "instagramAriaLabel": "X-Fate auf Instagram",
+    "mixcloudAriaLabel": "X-Fate auf Mixcloud",
+    "twitchAriaLabel": "TrueDedicationMusic auf Twitch",
+    "copyrightAriaLabel": "Copyright Info",
+    "copyrightAnchor": "© {{year}} X-Fate. Alle Rechte vorbehalten.",
+    "legalAriaLabel": "Rechtliches",
+    "imprintAriaLabel": "Impressum",
+    "imprintAnchor": "Impressum",
+    "privacyAriaLabel": "Datenschutz",
+    "privacyAnchor": "Datenschutz"
+}
