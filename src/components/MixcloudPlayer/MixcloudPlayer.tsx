@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useIsDesktop } from "../../hooks/useIsDesktop";
 import { useMixcloudShows } from "../../hooks/useMixcloudShows";
+import { capitalizeTags } from "../../utils/string-utils";
 
 type MixcloudPlayerProps = {
     limit?: number;
@@ -19,13 +20,6 @@ const MixcloudPlayer: React.FC<MixcloudPlayerProps> = ({
     const handleLoadMore = async () => {
         if (isLoading || !hasMore) return;
         setCurrentOffset(offset);
-    }
-    
-    function capitalizeTags(tag: string): string {
-        return tag
-            .split(" ")
-            .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(" ");
     }
     
     const isDesktop = useIsDesktop();
