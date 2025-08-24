@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-type ShowItem = {
+export type ShowItem = {
     key: string;
     name: string;
     url: string;

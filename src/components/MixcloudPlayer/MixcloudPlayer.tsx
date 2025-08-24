@@ -4,6 +4,7 @@ import { useMixcloudShows } from "../../hooks/useMixcloudShows";
 import { capitalizeTags } from "../../utils/string-utils";
 import { LoadMoreShows } from "./MixcloudPlayerList/LoadMoreShows/LoadMoreShows";
 import { ErrorMessage } from "../shared/ErrorMessage/ErrorMessage";
+import { MixcloudPlayerCompact } from "./MixcloudPlayerCompact/MixcloudPlayerCompact";
 
 type MixcloudPlayerProps = {
     limit?: number;
@@ -36,23 +37,7 @@ const MixcloudPlayer: React.FC<MixcloudPlayerProps> = ({
     
     return (
         <>
-            {variant === "compact" && (
-                <div className="grid grid-cols-1 gap-6">
-                    {shows.map((show) => (
-                        <div key={show.key} className="rounded-lg overflow-hidden shadow-md">
-                            <iframe
-                                title={show.name}
-                                width="100%"
-                                height="60"
-                                src={`https://player-widget.mixcloud.com/widget/iframe/?feed=${encodeURIComponent(show.url)}&light=1&hide_cover=1&mini=1`}
-                                allow="encrypted-media; fullscreen; autoplay; idle-detection; speaker-selection; web-share;"
-                                className="w-full"
-                                loading="lazy"
-                            ></iframe>
-                        </div>
-                    ))}
-                </div>
-            )}
+            <MixcloudPlayerCompact variant={variant} shows={shows} />
             {variant === "list" && (
                 <div className="divide-y divide-white-300 space-y-6">
                     {shows.map((show) => (
