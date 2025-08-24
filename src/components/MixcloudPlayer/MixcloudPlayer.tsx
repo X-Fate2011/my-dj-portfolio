@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useIsDesktop } from "../../hooks/useIsDesktop";
 import { useMixcloudShows } from "../../hooks/useMixcloudShows";
 import { capitalizeTags } from "../../utils/string-utils";
+import { LoadMoreShows } from "./MixcloudPlayerList/LoadMoreShows/LoadMoreShows";
 
 type MixcloudPlayerProps = {
     limit?: number;
@@ -70,8 +71,8 @@ const MixcloudPlayer: React.FC<MixcloudPlayerProps> = ({
                                         <div className="flex flex-col text-left">
                                             <span>Genre</span>
                                             <div className="flex flex-wrap gap-2 mt-2 -ml-2">
-                                                {show.tags.map((tag) => (
-                                                    <span
+                                                {show.tags.map((tag, index) => (
+                                                    <span key={index}
                                                         className="bg-gray-800 text-white px-3 py-1 my-1 rounded-full text-sm font-semibold">{capitalizeTags(tag.name)}</span>
                                                 ))}
                                             </div>
@@ -93,15 +94,7 @@ const MixcloudPlayer: React.FC<MixcloudPlayerProps> = ({
                         </div>
                     ))}
                     
-                    {showLoadMoreButton && hasMore && (
-                        <button
-                            onClick={handleLoadMore}
-                            disabled={isLoading}
-                            className="mt-4 px-4 py-2 rounded bg-purple-600 hover:bg-purple-700 text-white font-semibold disabled:opacity-50"
-                        >
-                            {isLoading ? "Lade..." : "Mehr laden"}
-                        </button>
-                    )}
+                    <LoadMoreShows showLoadMoreButton={showLoadMoreButton} hasMore={hasMore} isLoading={isLoading} handleLoadMore={handleLoadMore}/>
                 </div>
             )}
         </>
