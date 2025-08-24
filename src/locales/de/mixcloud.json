@@ -1,0 +1,9 @@
+{
+    "mixcloudFetchError": "Fehler beim Laden der Mixcloud-Shows",
+    "mixcloudLoadMoreLabel": "Mehr Laden",
+    "mixcloudLoadMoreBtnIsLoadingLabel": "Lade ...",
+    "mixcloudListCoverAlt": "Cover der Show „{{showName}}“",
+    "mixcloudListDate": "Datum",
+    "mixcloudListTitle": "Titel",
+    "mixcloudListGenre": "Genre"
+}

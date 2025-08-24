@@ -3,6 +3,7 @@ import { useMixcloudShows } from "../../hooks/useMixcloudShows";
 import { ErrorMessage } from "../shared/ErrorMessage/ErrorMessage";
 import { MixcloudPlayerCompact } from "./MixcloudPlayerCompact/MixcloudPlayerCompact";
 import { MixcloudPlayerList } from "./MixcloudPlayerList/MixcloudPlayerList";
+import { useTranslation } from "react-i18next";
 
 type MixcloudPlayerProps = {
     limit?: number;
@@ -12,11 +13,12 @@ type MixcloudPlayerProps = {
 const MixcloudPlayer = ({ limit = 2, variant = "compact" }: MixcloudPlayerProps) => {
     const [currentOffset, setCurrentOffset] = useState(0);
     const {shows, offset, hasMore, isLoading, error} = useMixcloudShows(currentOffset, limit);
+    const { t } = useTranslation("mixcloud");
     
     if (error) {
         const handleRetry = () => setCurrentOffset(offset);
         return <ErrorMessage
-            message="Fehler beim Laden der Mixcloud-Shows."
+            message={ t("mixcloudFetchError")}
             onRetry={handleRetry}
         />
     }
