@@ -1,4 +1,4 @@
-import MixcloudPlayer from "./MixcloudPlayer.tsx";
+import MixcloudPlayer from "./MixcloudPlayer/MixcloudPlayer.tsx";
 import { useCookieConsent } from "../hooks/useCookieConsent.ts";
 
 export default function MixcloudFeedHome() {

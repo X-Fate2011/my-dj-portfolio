@@ -1,14 +1,6 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { useIsDesktop } from "../../hooks/useIsDesktop";
-
-type ShowItem = {
-    key: string;
-    name: string;
-    url: string;
-    pictures: { large: string };
-    created_time: string;
-    tags: { name: string }[];
-};
+import { useMixcloudShows } from "../../hooks/useMixcloudShows";
 
 type MixcloudPlayerProps = {
     limit?: number;
@@ -21,47 +13,12 @@ const MixcloudPlayer: React.FC<MixcloudPlayerProps> = ({
                                                            showLoadMoreButton = false,
                                                            variant = "compact"
                                                        }) => {
-    const [shows, setShows] = useState<ShowItem[]>([]);
-    const [offset, setOffset] = useState(0);
-    const [hasMore, setHasMore] = useState(true);
-    const [isLoading, setIsLoading] = useState(false);
-    
-    const fetchMixes = async (currOffset: number, limit: number): Promise<ShowItem[]> => {
-        const response = await fetch(`https://api.mixcloud.com/x_fate/cloudcasts/?limit=${limit}&offset=${currOffset}`);
-        const data = await response.json();
-        return data.data;
-    };
-    
-    const hasFetchedOnce = useRef(false);
-    
-    useEffect(() => {
-        if (!hasFetchedOnce.current) {
-            hasFetchedOnce.current = true;
-            fetchMixes(0, limit!)
-                .then((newShows: ShowItem[]) => {
-                    setShows((prevShows) => [...prevShows, ...newShows]);
-                    setOffset((prevOffset) => prevOffset + limit);
-                    setHasMore(newShows.length === limit);
-                    setIsLoading(false);
-                })
-                .catch((err) => console.error(err));
-        }
-    }, []);
+    const [currentOffset, setCurrentOffset] = useState(0);
+    const { shows, offset, hasMore, isLoading, error } = useMixcloudShows(currentOffset, limit)
     
     const handleLoadMore = async () => {
         if (isLoading || !hasMore) return;
-        
-        setIsLoading(true);
-        try {
-            const moreData = await fetchMixes(offset, limit!);
-            setShows((prev) => [...prev, ...moreData]);
-            setOffset((prev) => prev + limit!);
-            setHasMore(moreData.length === limit);
-        } catch (err) {
-            console.error(err);
-        } finally {
-            setIsLoading(false);
-        }
+        setCurrentOffset(offset);
     }
     
     function capitalizeTags(tag: string): string {
