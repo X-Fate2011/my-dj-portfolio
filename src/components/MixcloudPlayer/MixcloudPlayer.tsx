@@ -3,6 +3,7 @@ import { useIsDesktop } from "../../hooks/useIsDesktop";
 import { useMixcloudShows } from "../../hooks/useMixcloudShows";
 import { capitalizeTags } from "../../utils/string-utils";
 import { LoadMoreShows } from "./MixcloudPlayerList/LoadMoreShows/LoadMoreShows";
+import { ErrorMessage } from "../shared/ErrorMessage/ErrorMessage";
 
 type MixcloudPlayerProps = {
     limit?: number;
@@ -16,7 +17,14 @@ const MixcloudPlayer: React.FC<MixcloudPlayerProps> = ({
                                                            variant = "compact"
                                                        }) => {
     const [currentOffset, setCurrentOffset] = useState(0);
-    const { shows, offset, hasMore, isLoading, error } = useMixcloudShows(currentOffset, limit)
+    const { shows, offset, hasMore, isLoading, error } = useMixcloudShows(currentOffset, limit);
+    
+    if (error) {
+        return <ErrorMessage
+            message="Fehler beim Laden der Mixcloud-Shows."
+            onRetry={() => setCurrentOffset(offset)}
+        />
+    }
     
     const handleLoadMore = async () => {
         if (isLoading || !hasMore) return;
