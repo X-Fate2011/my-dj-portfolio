@@ -21,6 +21,7 @@ export function useMixcloudShows(currentOffset: number, limit: number = 2) {
         const fetchOpts = {
             signal: controller.signal
         }
+        setIsLoading(true);
         fetch(`https://api.mixcloud.com/x_fate/cloudcasts/?limit=${limit}&offset=${currentOffset}`, fetchOpts)
             .then((response) => response.json())
             .then((data) => {
@@ -28,7 +29,9 @@ export function useMixcloudShows(currentOffset: number, limit: number = 2) {
                 setOffset((prevOffset) => prevOffset + limit);
                 setHasMore(data.data.length === limit);
             }).catch((err) => {
+            if (err.name !== "AbortError") {
                 setError(err as Error);
+            }
         }).finally(() => {
             setIsLoading(false);
         });
@@ -36,5 +39,5 @@ export function useMixcloudShows(currentOffset: number, limit: number = 2) {
         return () => controller.abort();
     }, [currentOffset, limit]);
     
-    return { shows, offset, isLoading, hasMore, error };
+    return {shows, offset, isLoading, hasMore, error};
 }
