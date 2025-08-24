@@ -9,7 +9,7 @@ describe("CookieBanner", () => {
     it("renders without crashing", () => {
         resetCookieConsentValue(COOKIE_CONSENT_NAME);
         render(<CookieBanner onAccept={() => {}} onDecline={() => {}} />);
-        expect(screen.getByText(/Dabei können Cookies/i)).toBeInTheDocument();
+        expect(screen.getByText(/notice/i)).toBeInTheDocument();
     });
     it("user can accept cookies", async () => {
         resetCookieConsentValue(COOKIE_CONSENT_NAME);

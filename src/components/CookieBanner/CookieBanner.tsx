@@ -1,4 +1,5 @@
 import { CookieConsent } from "react-cookie-consent";
+import { useTranslation } from "react-i18next";
 
 interface CookieBannerProps {
     onAccept: () => void;
@@ -6,11 +7,12 @@ interface CookieBannerProps {
 }
 
 export default function CookieBanner({ onAccept, onDecline }: CookieBannerProps) {
+    const { t } = useTranslation("cookie_banner");
     return (
             <CookieConsent
                 location="bottom"
-                buttonText="Zustimmen"
-                declineButtonText="Ablehnen"
+                buttonText={t("acceptBtnText")}
+                declineButtonText={t("declineBtnText")}
                 disableStyles={true}
                 enableDeclineButton
                 cookieName="siteConsent"
@@ -35,10 +37,7 @@ export default function CookieBanner({ onAccept, onDecline }: CookieBannerProps)
                 onAccept={onAccept}
                 onDecline={onDecline}
                 expires={365}
-            >
-                Auf dieser Seite sind Inhalte von Drittanbietern (z.B. Twitch, Mixcloud) eingebunden.
-                Dabei können Cookies durch diese Dienste gesetzt werden, sobald du zustimmst.
-            </CookieConsent>
+            >{ t("notice") }</CookieConsent>
     )
 }
 
