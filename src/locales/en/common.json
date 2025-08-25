@@ -11,6 +11,12 @@
         "desktopNavigationAriaLabel": "Desktop navigation"
     },
     "home": {
+        "subtitle1": "Sound. Energy. Emotion. Passion.",
+        "subtext1": "My name is X-Fate and I’ve been mixing electronic music since 2011 – from the first beats on webradio, to festival stages, and now to my livestreams on Twitch. Whether EDM, Hardstyle, Hard-/Frenchcore or Drum & Bass: I love blending genres and inspiring people with energy and emotions. Tune in, dive deep – and join me on my musical journey!",
+        "subtitle2": "Upcoming Shows",
+        "subtext2": "Every Tuesday at 8:00 PM – alternating between webradio and Twitch. Stop by and join live!",
+        "twitchAnchor": "Twitch",
+        "rmAnchor": "RauteMusik",
         "mixcloudFeedHomeTitle": "Listen to the latest shows again",
         "mixcloudFeedHomeCookieNote": "Please accept cookies to use the Mixcloud player.",
         "twitchStreamTitle": "Livestream",
