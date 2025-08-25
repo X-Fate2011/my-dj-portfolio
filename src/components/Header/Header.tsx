@@ -6,11 +6,12 @@ import { useIsDesktop } from "../../hooks/useIsDesktop";
 import { NavigationLinks } from "./subcomponents/NavigationLinks";
 import { useOnEscape } from "../../hooks/useOnEscape";
 import { useScrollLock } from "../../hooks/useScrollLock";
+import { FocusTrap } from "focus-trap-react";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const isDesktop = useIsDesktop(640);
-    const { t } = useTranslation("common");
+    const {t} = useTranslation("common");
     
     const toggleMenu = () => setIsOpen(prev => !prev);
     const closeMenu = () => setIsOpen(false);
@@ -21,7 +22,6 @@ const Header = () => {
         <header className="bg-header shadow sticky top-0 z-50">
             <div className="mx-auto max-w-full px-4 py-4 flex items-center justify-between">
                 
-                {/* Logo */}
                 <h1>
                     <Link to="/" aria-label={t("header.logoLinkAriaLabel")}>
                         <picture>
@@ -40,22 +40,24 @@ const Header = () => {
                         </picture>
                     </Link>
                 </h1>
-
-                <BurgerMenu burgerVisible={!isDesktop} isMenuOpen={isOpen} toggleMenu={toggleMenu}/>
+                
+                <FocusTrap active={isOpen}>
+                    <div className={isDesktop ? "hidden" : "block z-[999]"}>
+                        <BurgerMenu burgerVisible={!isDesktop} isMenuOpen={isOpen} toggleMenu={toggleMenu}/>
+                        <aside id="mobile-menu" aria-label={t("header.mobileNavigationAriaLabel")}
+                               className={`fixed top-0 right-0 w-full h-full bg-header text-white z-50 transform transition-transform duration-300 ease-in-out ${
+                                   isOpen ? "translate-x-0" : "translate-x-full"}`}>
+                            <div role="dialog" aria-modal="true" className="p-6 flex flex-col gap-6">
+                                <NavigationLinks closeMenu={closeMenu}/>
+                            </div>
+                        </aside>
+                    </div>
+                </FocusTrap>
                 
                 <nav className="hidden sm:flex gap-6" aria-label={t("header.desktopNavigationAriaLabel")}>
                     <NavigationLinks/>
                 </nav>
             </div>
-            
-            {/* Slide-In Mobile Menu */}
-            <aside id="mobile-menu" aria-label={t("header.mobileNavigationAriaLabel")}
-                   className={`fixed top-0 right-0 w-full h-full bg-header text-white z-50 transform transition-transform duration-300 ease-in-out ${
-                    isOpen ? "translate-x-0" : "translate-x-full"}`}>
-                <div role="dialog" aria-modal="true" className="p-6 flex flex-col gap-6">
-                    <NavigationLinks closeMenu={closeMenu}/>
-                </div>
-            </aside>
         </header>
     );
 };

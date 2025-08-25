@@ -12,7 +12,7 @@ export function BurgerMenu({ burgerVisible, isMenuOpen, toggleMenu }: BurgerMenu
             aria-label={isMenuOpen ? t("header.burgerMenuCloseAriaLabel") : t("header.burgerMenuOpenAriaLabel")}
             tabIndex={burgerVisible ? 0 : -1}
             onClick={toggleMenu}
-            className="sm:hidden z-[999] p-2 rounded text-white focus:outline-none focus:ring-2 focus:ring-white"
+            className="fixed top-4 right-4 sm:hidden z-[999] p-2 rounded text-white focus:outline-none focus:ring-2 focus:ring-white"
         >
                   <span
                       className={`block w-6 h-0.5 bg-white rounded transition-all duration-300 ${
