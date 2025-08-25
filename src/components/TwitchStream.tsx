@@ -7,7 +7,7 @@ export default function TwitchStream() {
     const {t} = useTranslation("common");
     return (
         <div
-            className={`'flex flex-col w-full lg:w-1/2 mt-4 lg:mt-auto lg:mx-8 pb-8 h-[400px]' ${consentGiven ? 'justify-center items-center' : ''} `}>
+            className={`flex flex-col w-full lg:w-1/2 mt-4 lg:mt-auto lg:mx-8 pb-8 h-[400px] ${consentGiven ? 'justify-center items-center' : ''} `}>
             <h2>{t("home.twitchStreamTitle")}</h2>
             {consentGiven ? (
                 <iframe
