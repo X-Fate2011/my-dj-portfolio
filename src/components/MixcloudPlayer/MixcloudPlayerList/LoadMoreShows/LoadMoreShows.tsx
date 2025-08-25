@@ -7,7 +7,7 @@ type LoadMoreShowsProps = {
 }
 
 export const LoadMoreShows = ({hasMore, isLoading, handleFetchMixes}: LoadMoreShowsProps) => {
-    const { t } = useTranslation("mixcloud");
+    const { t } = useTranslation("mixes");
     if (!hasMore) return null;
     
     return (

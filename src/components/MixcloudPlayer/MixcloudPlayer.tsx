@@ -13,7 +13,7 @@ type MixcloudPlayerProps = {
 const MixcloudPlayer = ({ limit = 2, variant = "compact" }: MixcloudPlayerProps) => {
     const [currentOffset, setCurrentOffset] = useState(0);
     const {shows, offset, hasMore, isLoading, error} = useMixcloudShows(currentOffset, limit);
-    const { t } = useTranslation("mixcloud");
+    const { t } = useTranslation("mixes");
     
     if (error) {
         const handleRetry = () => setCurrentOffset(offset);

@@ -16,7 +16,7 @@ type MixcloudPlayerListProps = {
 
 export function MixcloudPlayerList({variant, isLoading, hasMore, shows, handleFetchMixes}: MixcloudPlayerListProps) {
     const isDesktop = useIsDesktop();
-    const {t} = useTranslation("mixcloud");
+    const {t} = useTranslation("mixes");
     
     if (variant !== "list") return null;
     
@@ -33,7 +33,7 @@ export function MixcloudPlayerList({variant, isLoading, hasMore, shows, handleFe
 type MixcloudShowItemProps = {
     show: ShowItem;
     isDesktop: boolean;
-    t: TFunction<"mixcloud">;
+    t: TFunction<"mixes">;
 }
 
 export function MixcloudShowItem({show,isDesktop, t,}: MixcloudShowItemProps) {
@@ -68,7 +68,7 @@ export function MixcloudShowItem({show,isDesktop, t,}: MixcloudShowItemProps) {
 
 type DateBlockProps = {
     date: string;
-    t: TFunction<"mixcloud">;
+    t: TFunction<"mixes">;
 }
 
 function DateBlock({date, t}: DateBlockProps) {
@@ -87,7 +87,7 @@ function DateBlock({date, t}: DateBlockProps) {
 
 type TitleBlockProps = {
     title: string;
-    t: TFunction<"mixcloud">;
+    t: TFunction<"mixes">;
 }
 
 function TitleBlock({title, t}: TitleBlockProps) {
@@ -101,7 +101,7 @@ function TitleBlock({title, t}: TitleBlockProps) {
 
 type TagsBlockProps = {
     tags: { name: string }[];
-    t: TFunction<"mixcloud">;
+    t: TFunction<"mixes">;
 }
 
 function TagsBlock({tags, t}: TagsBlockProps) {
