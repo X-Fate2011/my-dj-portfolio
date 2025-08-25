@@ -21,7 +21,7 @@ export function MixcloudPlayerList({variant, isLoading, hasMore, shows, handleFe
     if (variant !== "list") return null;
     
     return (
-        <div className="divide-y divide-white-300 space-y-6">
+        <div data-testid="listWrapper" className="divide-y divide-white-300 space-y-6">
             {shows.map((show) => (
                 <MixcloudShowItem key={show.key} show={show} isDesktop={isDesktop} t={t}/>
             ))}
@@ -36,7 +36,7 @@ type MixcloudShowItemProps = {
     t: TFunction<"mixcloud">;
 }
 
-function MixcloudShowItem({show,isDesktop, t,}: MixcloudShowItemProps) {
+export function MixcloudShowItem({show,isDesktop, t,}: MixcloudShowItemProps) {
     return (
         <div className="flex flex-col md:flex-row pb-6 w-full">
             <img
@@ -110,7 +110,7 @@ function TagsBlock({tags, t}: TagsBlockProps) {
             <span>{t("mixcloudListGenre")}</span>
             <div className="flex flex-wrap gap-2 mt-2 -ml-2">
                 {tags.map((tag, index) => (
-                    <span
+                    <span data-testid="tag"
                         key={index}
                         className="bg-gray-800 text-white px-3 py-1 my-1 rounded-full text-sm font-semibold"
                     >{capitalizeTags(tag.name)}</span>
