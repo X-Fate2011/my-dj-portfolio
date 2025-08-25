@@ -60,7 +60,6 @@ describe("MixcloudPlayerList", () => {
         });
     });
     
-    // Edge cases
     it("renders no tags when the tags array is empty", () => {
         const EMPTY_TAG_DATA = [{ ...MOCK_DATA[0], tags: [] }];
         render(
