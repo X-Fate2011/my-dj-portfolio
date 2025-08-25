@@ -1,3 +1,13 @@
 {
-
+    "header": {
+        "start": "Home",
+        "mixes": "Mixes",
+        "about": "About Me",
+        "burgerMenuOpenAriaLabel": "Open menu",
+        "burgerMenuCloseAriaLabel": "Close menu",
+        "logoLinkAriaLabel": "Go to home page",
+        "logoAltLabel": "X-Fate Logo",
+        "mobileNavigationAriaLabel": "Mobile navigation",
+        "desktopNavigationAriaLabel": "Desktop navigation"
+    }
 }

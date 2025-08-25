@@ -4,7 +4,7 @@ import { useState } from "react";
 import CookieOverlay from "../components/CookieOverlay/CookieOverlay.tsx";
 import CookieBanner from "../components/CookieBanner/CookieBanner.tsx";
 import { useCookieConsent } from "../hooks/useCookieConsent.ts";
-import Header from "../components/Header";
+import Header from "../components/Header/Header";
 
 const RootLayout = () => {
     const consentGiven = useCookieConsent();
