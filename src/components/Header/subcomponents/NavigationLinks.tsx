@@ -12,7 +12,7 @@ const PAGE_LINKS = [
     { path: "/about", labeli18n: "header.about" },
 ];
 
-type NavigationLinksProps = { closeMenu?: () => void };
+export type NavigationLinksProps = { closeMenu?: () => void };
 
 export function NavigationLinks({ closeMenu }: NavigationLinksProps) {
     const { t } = useTranslation("common");

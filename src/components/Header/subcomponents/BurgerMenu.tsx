@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-type BurgerMenuProps = { burgerVisible: boolean, isMenuOpen: boolean, toggleMenu: () => void }
+export type BurgerMenuProps = { burgerVisible: boolean, isMenuOpen: boolean, toggleMenu: () => void }
 
 export function BurgerMenu({ burgerVisible, isMenuOpen, toggleMenu }: BurgerMenuProps) {
     const { t } = useTranslation("common");
