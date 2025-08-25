@@ -9,5 +9,12 @@
         "logoAltLabel": "X-Fate Logo",
         "mobileNavigationAriaLabel": "Mobile navigation",
         "desktopNavigationAriaLabel": "Desktop navigation"
+    },
+    "home": {
+        "mixcloudFeedHomeTitle": "Listen to the latest shows again",
+        "mixcloudFeedHomeCookieNote": "Please accept cookies to use the Mixcloud player.",
+        "twitchStreamTitle": "Livestream",
+        "twitchStreamFrameTitle": "Twitch stream by TrueDedicationMusic",
+        "twitchStreamCookieNote": "Please accept cookies to use the Twitch livestream."
     }
 }
