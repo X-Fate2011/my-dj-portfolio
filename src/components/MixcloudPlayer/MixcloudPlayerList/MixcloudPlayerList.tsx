@@ -30,15 +30,13 @@ export function MixcloudPlayerList({variant, isLoading, hasMore, shows, handleFe
     );
 }
 
-function MixcloudShowItem({
-                              show,
-                              isDesktop,
-                              t,
-                          }: {
+type MixcloudShowItemProps = {
     show: ShowItem;
     isDesktop: boolean;
     t: TFunction<"mixcloud">;
-}) {
+}
+
+function MixcloudShowItem({show,isDesktop, t,}: MixcloudShowItemProps) {
     return (
         <div className="flex flex-col md:flex-row pb-6 w-full">
             <img
