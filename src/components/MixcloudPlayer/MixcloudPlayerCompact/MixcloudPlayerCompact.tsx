@@ -18,7 +18,7 @@ export function MixcloudPlayerCompact({ variant, shows }: MixcloudPlayerCompactP
                 <MixcloudPlayerFrame key={show.key} showTitle={show.name} showUrl={show.url} hideArtwork={false}
                                      customClass={"rounded-lg overflow-hidden shadow-md"}/>
             ))}
-            <NavLink to="/mixes" className="text-sm md:text-base font-bold hover:underline">
+            <NavLink to="/mixes" className="mb-4 md:mt-4 text-sm md:text-base font-bold hover:underline">
                 {t("home.mixcloudFeedHomeShowAll")}
             </NavLink>
         </div>
