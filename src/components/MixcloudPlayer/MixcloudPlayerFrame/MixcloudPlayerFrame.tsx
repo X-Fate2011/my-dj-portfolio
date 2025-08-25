@@ -8,8 +8,9 @@ type MixcloudPlayerFrameProps = {
 export const MixcloudPlayerFrame = ({showTitle, showUrl, hideArtwork, customClass}: MixcloudPlayerFrameProps) => {
     
     return (
-        <div className={customClass}>
+        <div data-testid="frameWrapper" className={customClass}>
             <iframe
+                data-testid="frame"
                 title={showTitle}
                 width="100%"
                 height="60"
