@@ -6,7 +6,7 @@ export default function TwitchStream() {
     const consentGiven = useCookieConsent();
     const {t} = useTranslation("common");
     return (
-        <div
+        <section
             className={`flex flex-col w-full lg:w-1/2 mt-4 lg:mt-auto lg:mx-8 pb-8 h-[400px] ${consentGiven ? 'justify-center items-center' : ''} `}>
             <h2>{t("home.twitchStreamTitle")}</h2>
             {consentGiven ? (
@@ -19,6 +19,6 @@ export default function TwitchStream() {
                 </iframe>
             ) : <p>{t("home.twitchStreamCookieNote")}</p>
             }
-        </div>
+        </section>
     )
 }
