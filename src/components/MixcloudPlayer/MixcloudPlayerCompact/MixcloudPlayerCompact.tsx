@@ -10,7 +10,7 @@ export function MixcloudPlayerCompact({ variant, shows }: MixcloudPlayerCompactP
     if (variant !== "compact") return null;
     
     return (
-        <div className="grid grid-cols-1 gap-6">
+        <div data-testid="mixcloudPlayerFrameWrapper" className="grid grid-cols-1 gap-6">
             {shows.map((show) => (
                 <MixcloudPlayerFrame key={show.key} showTitle={show.name} showUrl={show.url} hideArtwork={false}
                                      customClass={"rounded-lg overflow-hidden shadow-md"}/>
