@@ -2,6 +2,7 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import MixcloudPlayer from "./MixcloudPlayer";
 import { describe, it, expect } from "vitest";
 import * as hooks from "../../hooks/useMixcloudShows";
+import { MOCK_DATA } from "../../mock/mixcloud-mock";
 
 describe("MixcloudPlayer", () => {
     beforeAll(() => {
@@ -29,8 +30,11 @@ describe("MixcloudPlayer", () => {
     
     it("renders an ErrorMessage when the hook returns an error", () => {
         vi.spyOn(hooks, "useMixcloudShows").mockReturnValue({
-            data: null,
-            error: new Error("Something went wrong"),
+            shows: [],
+            hasMore: false,
+            isLoading: false,
+            offset: 0,
+            error: new Error("Something went wrong")
         });
         
         render(<MixcloudPlayer />);
@@ -47,7 +51,7 @@ describe("MixcloudPlayer", () => {
             offset: offsetState,
             hasMore: true,
             isLoading: false,
-            error: true,
+            error: new Error("Something went wrong"),
         }));
         
         render(<MixcloudPlayer limit={2} variant="compact" />);
@@ -58,7 +62,7 @@ describe("MixcloudPlayer", () => {
         fireEvent.click(retryButton);
         
         mockUseMixcloudShows.mockImplementation((offset) => ({
-            shows: [{ key: "1", name: "Test Show", url: "url" }],
+            shows: [MOCK_DATA[0]],
             offset,
             hasMore: true,
             isLoading: false,
@@ -67,7 +71,7 @@ describe("MixcloudPlayer", () => {
         
         render(<MixcloudPlayer limit={2} variant="compact" />);
         
-        const showElement = screen.getByTitle("Test Show");
+        const showElement = screen.getByTitle("Harder, Faster, Stronger #277 [HARDSTYLE, RAWSTYLE, HARDCORE, EUPHORIC FRENCHCORE]");
         expect(showElement).toBeInTheDocument();
     });
     
