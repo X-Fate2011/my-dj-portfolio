@@ -1,10 +1,10 @@
 import { capitalizeTags } from "../../../utils/string-utils";
 import { LoadMoreShows } from "./LoadMoreShows/LoadMoreShows";
 import { useIsDesktop } from "../../../hooks/useIsDesktop";
-import type { ShowItem } from "../../../hooks/useMixcloudShows";
 import type { TFunction } from "i18next";
 import { useTranslation } from "react-i18next";
 import { MixcloudPlayerFrame } from "../MixcloudPlayerFrame/MixcloudPlayerFrame";
+import type { ShowItem } from "../../../types/ShowItem";
 
 type MixcloudPlayerListProps = {
   variant: "compact" | "list";

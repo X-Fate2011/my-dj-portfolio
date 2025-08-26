@@ -1,7 +1,7 @@
-import type { ShowItem } from "../../../hooks/useMixcloudShows";
 import { MixcloudPlayerFrame } from "../MixcloudPlayerFrame/MixcloudPlayerFrame";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import type { ShowItem } from "../../../types/ShowItem";
 
 type MixcloudPlayerCompactProps = {
   variant: "compact" | "list";

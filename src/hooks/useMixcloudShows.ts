@@ -1,13 +1,6 @@
 import { useEffect, useState } from "react";
-
-export type ShowItem = {
-  key: string;
-  name: string;
-  url: string;
-  pictures: { large: string };
-  created_time: string;
-  tags: { name: string }[];
-};
+import type { ShowItem } from "../types/ShowItem";
+import { fetchMixcloudShows } from "../services/mixcloud";
 
 export function useMixcloudShows(currentOffset: number, limit: number = 2) {
   const [shows, setShows] = useState<ShowItem[]>([]);
@@ -18,16 +11,8 @@ export function useMixcloudShows(currentOffset: number, limit: number = 2) {
 
   useEffect(() => {
     const controller = new AbortController();
-    const fetchOpts = {
-      signal: controller.signal,
-    };
     setIsLoading(true);
-    fetch(
-      `https://api.mixcloud.com/x_fate/cloudcasts/?limit=${limit}&offset=${currentOffset}`,
-      fetchOpts
-    )
-      .then((response) => response.json())
-      .then((data) => {
+    fetchMixcloudShows(currentOffset, limit, controller.signal).then((data) => {
         setShows((prevShows) => [...prevShows, ...data.data]);
         setOffset((prevOffset) => prevOffset + limit);
         setHasMore(data.data.length === limit);
