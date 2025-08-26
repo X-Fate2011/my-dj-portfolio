@@ -24,7 +24,7 @@ function AboutMePage() {
             sizes="100vw"
           />
           <img
-            src="/x-fate_480.webp"
+            src="/x-fate2_480.webp"
             alt="X-Fate auf der Ruhr In Love 2023"
             className="sepia h-full w-full shadow-md object-cover object-[100%_48%]"
             loading="eager"

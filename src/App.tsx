@@ -20,7 +20,7 @@ function App() {
                 sizes="100vw"
               />
               <img
-                src="/x-fate_1280.webp"
+                src="/x-fate_480.webp"
                 alt="X-Fate"
                 className="w-full h-full object-cover object-top rounded-none lg:rounded-2xl"
                 loading="eager"
