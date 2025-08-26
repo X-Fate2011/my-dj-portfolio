@@ -72,8 +72,18 @@ button:focus-visible {
   }
 }
 
-.imprint h1, .imprint h2, .imprint h3, .imprint h4, .imprint h5, .imprint h6,
-.privacy h1, .privacy h2, .privacy h3, .privacy h4, .privacy h5, .privacy h6 {
+.imprint h1,
+.imprint h2,
+.imprint h3,
+.imprint h4,
+.imprint h5,
+.imprint h6,
+.privacy h1,
+.privacy h2,
+.privacy h3,
+.privacy h4,
+.privacy h5,
+.privacy h6 {
   @apply font-bold my-4;
 }
 

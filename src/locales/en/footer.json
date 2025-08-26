@@ -1,13 +1,13 @@
 {
-    "navAriaLabel": "Social Media",
-    "instagramAriaLabel": "X-Fate on Instagram",
-    "mixcloudAriaLabel": "X-Fate on Mixcloud",
-    "twitchAriaLabel": "TrueDedicationMusic on Twitch",
-    "copyrightAriaLabel": "Copyright Info",
-    "copyrightAnchor": "© {{year}} X-Fate. All rights reserved.",
-    "legalAriaLabel": "Legal",
-    "imprintAriaLabel": "Imprint",
-    "imprintAnchor": "Imprint",
-    "privacyAriaLabel": "Privacy",
-    "privacyAnchor": "Privacy"
+  "navAriaLabel": "Social Media",
+  "instagramAriaLabel": "X-Fate on Instagram",
+  "mixcloudAriaLabel": "X-Fate on Mixcloud",
+  "twitchAriaLabel": "TrueDedicationMusic on Twitch",
+  "copyrightAriaLabel": "Copyright Info",
+  "copyrightAnchor": "© {{year}} X-Fate. All rights reserved.",
+  "legalAriaLabel": "Legal",
+  "imprintAriaLabel": "Imprint",
+  "imprintAnchor": "Imprint",
+  "privacyAriaLabel": "Privacy",
+  "privacyAnchor": "Privacy"
 }

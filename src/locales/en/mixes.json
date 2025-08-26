@@ -1,10 +1,10 @@
 {
-    "mixcloudFetchError": "Error loading Mixcloud shows",
-    "mixcloudLoadMoreLabel": "Load more",
-    "mixcloudLoadMoreBtnIsLoadingLabel": "Loading ...",
-    "mixcloudListCoverAlt": "Cover of the show „{{showName}}“",
-    "mixcloudListDate": "Date",
-    "mixcloudListTitle": "Title",
-    "mixcloudListGenre": "Genre",
-    "mixesAcceptCookiesNotice": "Bitte akzeptiere die Cookies, um den Mixcloud-Feed sehen zu können."
+  "mixcloudFetchError": "Error loading Mixcloud shows",
+  "mixcloudLoadMoreLabel": "Load more",
+  "mixcloudLoadMoreBtnIsLoadingLabel": "Loading ...",
+  "mixcloudListCoverAlt": "Cover of the show „{{showName}}“",
+  "mixcloudListDate": "Date",
+  "mixcloudListTitle": "Title",
+  "mixcloudListGenre": "Genre",
+  "mixesAcceptCookiesNotice": "Bitte akzeptiere die Cookies, um den Mixcloud-Feed sehen zu können."
 }

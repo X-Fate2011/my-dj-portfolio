@@ -11,20 +11,20 @@ import cookieBannerEn from "../locales/en/cookie-banner.json";
 import mixesEn from "../locales/en/mixes.json";
 
 export const resources = {
-    de: {
-        common: commonDe,
-        about_me: aboutMeDe,
-        footer: footerDe,
-        cookie_banner: cookieBannerDe,
-        mixes: mixesDe,
-    },
-    en: {
-        common: commonEn,
-        about_me: aboutMeEn,
-        footer: footerEn,
-        cookie_banner: cookieBannerEn,
-        mixes: mixesEn,
-    }
+  de: {
+    common: commonDe,
+    about_me: aboutMeDe,
+    footer: footerDe,
+    cookie_banner: cookieBannerDe,
+    mixes: mixesDe,
+  },
+  en: {
+    common: commonEn,
+    about_me: aboutMeEn,
+    footer: footerEn,
+    cookie_banner: cookieBannerEn,
+    mixes: mixesEn,
+  },
 } as const;
 
 export type AvailableLanguages = keyof typeof resources;

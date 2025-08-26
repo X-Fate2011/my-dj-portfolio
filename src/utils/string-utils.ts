@@ -3,8 +3,8 @@
  * @param {string} tag The tag to capitalize
  */
 export function capitalizeTags(tag: string): string {
-    return tag
-        .split(" ")
-        .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(" ");
+  return tag
+    .split(" ")
+    .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
 }
