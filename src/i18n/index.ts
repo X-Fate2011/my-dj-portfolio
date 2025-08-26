@@ -16,6 +16,10 @@ i18n
       escapeValue: false,
     },
     debug: import.meta.env.DEV,
+    detection: {
+      order: ["localStorage", "navigator"],
+      caches: ["localStorage"],
+    },
   });
 
 export default i18n;

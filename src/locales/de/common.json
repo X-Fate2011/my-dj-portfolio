@@ -8,7 +8,8 @@
     "logoLinkAriaLabel": "Zur Startseite",
     "logoAltLabel": "X-Fate Logo",
     "mobileNavigationAriaLabel": "Mobile Navigation",
-    "desktopNavigationAriaLabel": "Desktop Navigation"
+    "desktopNavigationAriaLabel": "Desktop Navigation",
+    "switchLanguageAriaLabel": "Sprache wechseln zu {{lang}}"
   },
   "home": {
     "subtitle1": "Sound. Energie. Emotion. Passion.",

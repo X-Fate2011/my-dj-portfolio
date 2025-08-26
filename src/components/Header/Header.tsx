@@ -7,6 +7,7 @@ import { NavigationLinks } from "./subcomponents/NavigationLinks";
 import { useOnEscape } from "../../hooks/useOnEscape";
 import { useScrollLock } from "../../hooks/useScrollLock";
 import { FocusTrap } from "focus-trap-react";
+import { LanguageSwitcher } from "../common/LanguageSwitcher";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,7 +47,7 @@ const Header = () => {
             <aside
               id="mobile-menu"
               aria-label={t("header.mobileNavigationAriaLabel")}
-              className={`fixed top-0 right-0 w-full h-full bg-header text-white z-50 transform transition-transform duration-300 ease-in-out ${
+              className={`fixed p-6 top-0 right-0 w-full h-full bg-header flex flex-col justify-between text-white z-50 transform transition-transform duration-300 ease-in-out ${
                 isOpen ? "translate-x-0" : "translate-x-full"
               }`}
             >
@@ -54,16 +55,21 @@ const Header = () => {
                 role="dialog"
                 aria-modal="true"
                 aria-label={t("header.mobileNavigationAriaLabel")}
-                className="p-6 flex flex-col gap-6"
+                className="flex flex-col gap-6"
               >
                 <NavigationLinks closeMenu={closeMenu} />
               </div>
+              <LanguageSwitcher />
             </aside>
           </div>
         </FocusTrap>
 
-        <nav className="hidden sm:flex gap-6" aria-label={t("header.desktopNavigationAriaLabel")}>
+        <nav
+          className="hidden sm:flex gap-6 items-center"
+          aria-label={t("header.desktopNavigationAriaLabel")}
+        >
           <NavigationLinks />
+          <LanguageSwitcher />
         </nav>
       </div>
     </header>
