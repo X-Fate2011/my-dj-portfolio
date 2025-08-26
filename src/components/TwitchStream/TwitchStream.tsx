@@ -1,4 +1,4 @@
-import { useCookieConsent } from "../hooks/useCookieConsent.ts";
+import { useCookieConsent } from "../../hooks/useCookieConsent.ts";
 import { useTranslation } from "react-i18next";
 
 export default function TwitchStream() {
