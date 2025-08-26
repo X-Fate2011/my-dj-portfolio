@@ -3,6 +3,7 @@ import MixcloudPlayer from "./MixcloudPlayer";
 import { describe, it, expect } from "vitest";
 import * as hooks from "../../hooks/useMixcloudShows";
 import { MOCK_DATA } from "../../mock/mixcloud-mock";
+import { MemoryRouter } from "react-router-dom";
 
 describe("MixcloudPlayer", () => {
     beforeAll(() => {
@@ -22,7 +23,7 @@ describe("MixcloudPlayer", () => {
     });
     
     it("uses the default props when none are provided (limit=2, variant='compact')", () => {
-        render(<MixcloudPlayer/>);
+        render(<MemoryRouter><MixcloudPlayer/></MemoryRouter>);
         const wrapper = screen.getByTestId("mixcloudPlayerFrameWrapper");
         expect(wrapper).toBeInTheDocument();
         expect(wrapper).toHaveClass("grid"); // class is only set in "compact" layout.
@@ -54,7 +55,7 @@ describe("MixcloudPlayer", () => {
             error: new Error("Something went wrong"),
         }));
         
-        render(<MixcloudPlayer limit={2} variant="compact" />);
+        render(<MemoryRouter><MixcloudPlayer limit={2} variant="compact" /></MemoryRouter>);
         
         const retryButton = screen.getByRole("button", { name: /Erneut versuchen/i });
         expect(retryButton).toBeInTheDocument();
@@ -69,7 +70,7 @@ describe("MixcloudPlayer", () => {
             error: null,
         }));
         
-        render(<MixcloudPlayer limit={2} variant="compact" />);
+        render(<MemoryRouter><MixcloudPlayer limit={2} variant="compact" /></MemoryRouter>);
         
         const showElement = screen.getByTitle("Harder, Faster, Stronger #277 [HARDSTYLE, RAWSTYLE, HARDCORE, EUPHORIC FRENCHCORE]");
         expect(showElement).toBeInTheDocument();
