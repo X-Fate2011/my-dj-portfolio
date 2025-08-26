@@ -4,7 +4,12 @@ import { vi } from "vitest";
 import type { NavigationLinksProps } from "./subcomponents/NavigationLinks";
 import type { BurgerMenuProps } from "./subcomponents/BurgerMenu";
 import { MemoryRouter } from "react-router-dom";
-import type { ReactElement } from "react";
+import type { ReactElement, ReactNode } from "react";
+
+vi.mock("focus-trap-react", () => ({
+    __esModule: true,
+    FocusTrap: ({ children }: { children: ReactNode }) => <>{children}</>,
+}));
 
 vi.mock("react-i18next", () => ({
     useTranslation: () => ({
