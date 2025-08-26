@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitch } from '@fortawesome/free-brands-svg-icons'
 import { faPlay } from '@fortawesome/free-solid-svg-icons'
-import './App.css'
-import MixcloudFeedHome from "../components/MixcloudFeedHome/MixcloudFeedHome.tsx";
-import TwitchStream from "../components/TwitchStream/TwitchStream.tsx";
+import './styles/App.css'
+import MixcloudFeedHome from "./components/MixcloudFeedHome/MixcloudFeedHome.tsx";
+import TwitchStream from "./components/TwitchStream/TwitchStream.tsx";
 import { useTranslation } from "react-i18next";
 
 function App() {

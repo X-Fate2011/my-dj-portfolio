@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import RootLayout from "./layouts/RootLayout";
-import App from './pages/App.tsx';
+import App from './App.tsx';
 import MixesPage from "./pages/MixesPage.tsx";
 import AboutMePage from "./pages/AboutMePage.tsx";
 import ImprintPage from "./pages/ImprintPage.tsx";
