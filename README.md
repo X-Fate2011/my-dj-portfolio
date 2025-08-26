@@ -1,13 +1,14 @@
 # My DJ Portfolio 🎧
 
-Ein persönliches DJ-Portfolio, gebaut mit **React + TypeScript + Vite**.  
-Ziel: Meine Musik und Projekte professionell online präsentieren.
+My personal DJ portfolio, built with **React + TypeScript + Vite**.  
+My goal: Represent me and my music in a professional way.
 
 ## Tech Stack
 
 - React 19 + TypeScript
 - Vite
-- Tailwind CSS
+- Tailwind CSS v4
+- Prettier + ESLint
 - Vitest, Jest + React Testing Library
 
 ## Installation & Startup
@@ -24,6 +25,14 @@ npm run dev
 ```bash
 npm run test
 ```
+
+## Code Style & Linting
+
+This project uses **ESLint + Prettier** for clean and consistent code.
+- `npm run lint` → Checks code for linting errors.
+- `npm run lint:fix` → Automatically solves linting errors.
+- `npm run format` → Formats code according to Prettier rules.
+
 
 ## Live Demo
 
