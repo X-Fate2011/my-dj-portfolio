@@ -47,7 +47,7 @@ const Header = () => {
                         <aside id="mobile-menu" aria-label={t("header.mobileNavigationAriaLabel")}
                                className={`fixed top-0 right-0 w-full h-full bg-header text-white z-50 transform transition-transform duration-300 ease-in-out ${
                                    isOpen ? "translate-x-0" : "translate-x-full"}`}>
-                            <div role="dialog" aria-modal="true" className="p-6 flex flex-col gap-6">
+                            <div role="dialog" aria-modal="true" aria-label={t("header.mobileNavigationAriaLabel")} className="p-6 flex flex-col gap-6">
                                 <NavigationLinks closeMenu={closeMenu}/>
                             </div>
                         </aside>

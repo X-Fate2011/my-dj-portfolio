@@ -24,7 +24,7 @@ function AboutMePage() {
                         sizes="100vw"
                     />
                     <img
-                        src="/x-fate_1280.webp"
+                        src="/x-fate_480.webp"
                         alt="X-Fate auf der Ruhr In Love 2023"
                         className="sepia h-full w-full shadow-md object-cover object-[100%_48%]"
                         loading="eager"
@@ -53,7 +53,7 @@ function AboutMePage() {
                                         i18nKey={key}
                                         ns="about_me"
                                         values={{ years }}
-                                        components={{ 0: <span className="font-bold" />, 1: <a href={href} target="_blank" rel="noreferrer" /> }}
+                                        components={{ 0: <span className="font-bold" />, 1: <a href={href} className="underline hover:font-bold" target="_blank" rel="noreferrer" /> }}
                                     />
                                 </li>
                             ))}
