@@ -13,7 +13,7 @@ export const SocialLinks = () => {
     
     return (
         <nav aria-label="Social Media" className="flex gap-4">
-            {links.map((link, index) => (
+            {links.map((link) => (
                 <a
                     key={link.href}
                     href={link.href}
@@ -21,7 +21,6 @@ export const SocialLinks = () => {
                     rel="noopener noreferrer"
                     aria-label={t(link.key)}
                     className="hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
-                    tabIndex={index}
                 >
                     <FontAwesomeIcon icon={link.icon} size="2x" />
                 </a>

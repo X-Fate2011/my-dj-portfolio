@@ -10,7 +10,6 @@ export const LegalLinks = () => {
             className="flex flex-wrap justify-center gap-4 text-sm text-gray-400"
         >
             <NavLink
-                tabIndex={3}
                 aria-label={t("imprintAriaLabel")}
                 rel="noopener noreferrer"
                 to="/imprint"
@@ -19,7 +18,6 @@ export const LegalLinks = () => {
                 {t("imprintAnchor")}
             </NavLink>
             <NavLink
-                tabIndex={4}
                 aria-label={t("privacyAriaLabel")}
                 rel="noopener noreferrer"
                 to="/privacy"
