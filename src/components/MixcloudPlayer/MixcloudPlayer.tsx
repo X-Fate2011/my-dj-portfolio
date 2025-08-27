@@ -12,7 +12,7 @@ type MixcloudPlayerProps = {
 
 const MixcloudPlayer = ({ limit = 2, variant = "compact" }: MixcloudPlayerProps) => {
   const [currentOffset, setCurrentOffset] = useState(0);
-  const { shows, offset, hasMore, isLoading, error } = useMixcloudShows(currentOffset, limit);
+  const { shows, offset, hasMore, error } = useMixcloudShows(currentOffset, limit);
   const { t } = useTranslation("mixes");
 
   if (error) {
@@ -21,7 +21,7 @@ const MixcloudPlayer = ({ limit = 2, variant = "compact" }: MixcloudPlayerProps)
   }
 
   const handleFetchMixes = () => {
-    if (isLoading || !hasMore) return;
+    if (!hasMore) return;
     setCurrentOffset(offset);
   };
 
@@ -31,7 +31,6 @@ const MixcloudPlayer = ({ limit = 2, variant = "compact" }: MixcloudPlayerProps)
       <MixcloudPlayerList
         variant={variant}
         shows={shows}
-        isLoading={isLoading}
         hasMore={hasMore}
         handleFetchMixes={handleFetchMixes}
       />

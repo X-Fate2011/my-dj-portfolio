@@ -9,14 +9,12 @@ import type { ShowItem } from "../../../types/ShowItem";
 type MixcloudPlayerListProps = {
   variant: "compact" | "list";
   shows: ShowItem[];
-  isLoading: boolean;
   hasMore: boolean;
   handleFetchMixes: () => void;
 };
 
 export function MixcloudPlayerList({
   variant,
-  isLoading,
   hasMore,
   shows,
   handleFetchMixes,
@@ -31,7 +29,7 @@ export function MixcloudPlayerList({
       {shows.map((show) => (
         <MixcloudShowItem key={show.key} show={show} isDesktop={isDesktop} t={t} />
       ))}
-      <LoadMoreShows hasMore={hasMore} isLoading={isLoading} handleFetchMixes={handleFetchMixes} />
+      <LoadMoreShows hasMore={hasMore} handleFetchMixes={handleFetchMixes} />
     </div>
   );
 }

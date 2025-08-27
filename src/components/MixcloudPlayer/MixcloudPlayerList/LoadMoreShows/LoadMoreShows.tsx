@@ -1,13 +1,14 @@
 import { useTranslation } from "react-i18next";
+import { useLoading } from "../../../../hooks/useLoading";
 
 type LoadMoreShowsProps = {
   hasMore: boolean;
-  isLoading: boolean;
   handleFetchMixes: () => void;
 };
 
-export const LoadMoreShows = ({ hasMore, isLoading, handleFetchMixes }: LoadMoreShowsProps) => {
+export const LoadMoreShows = ({ hasMore, handleFetchMixes }: LoadMoreShowsProps) => {
   const { t } = useTranslation("mixes");
+  const { isLoading } = useLoading();
   if (!hasMore) return null;
 
   return (

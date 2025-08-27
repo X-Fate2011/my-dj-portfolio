@@ -5,6 +5,7 @@ import CookieOverlay from "../components/CookieOverlay/CookieOverlay.tsx";
 import CookieBanner from "../components/CookieBanner/CookieBanner.tsx";
 import { useCookieConsent } from "../hooks/useCookieConsent.ts";
 import Header from "../components/Header/Header";
+import { LoadingProvider } from "../contexts/LoadingContext";
 
 const RootLayout = () => {
   const consentGiven = useCookieConsent();
@@ -17,7 +18,7 @@ const RootLayout = () => {
   const handleDecline = () => setShowBanner(false);
 
   return (
-    <>
+    <LoadingProvider>
       <div className="flex min-h-screen flex-col">
         <Header />
 
@@ -29,7 +30,7 @@ const RootLayout = () => {
       </div>
       <CookieOverlay visible={showBanner} />
       <CookieBanner onAccept={handleAccept} onDecline={handleDecline} />
-    </>
+    </LoadingProvider>
   );
 };
 

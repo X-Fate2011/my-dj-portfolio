@@ -33,7 +33,6 @@ function App() {
             />
           </div>
 
-          {/* Content */}
           <div className="flex flex-col relative justify-between lg:ml-8 z-20">
             <div className="p-4 lg:p-6 xl:p-8 lg:mb-8 bg-transparent lg:bg-white lg:rounded-2xl text-black max-w-full">
               <h2>{t("home.subtitle1")}</h2>
