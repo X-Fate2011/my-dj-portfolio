@@ -1,9 +1,10 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { screen, fireEvent } from "@testing-library/react";
 import MixcloudPlayer from "./MixcloudPlayer";
 import { describe, it, expect } from "vitest";
 import * as hooks from "../../hooks/useMixcloudShows";
 import { MOCK_DATA } from "../../mock/mixcloud-mock";
 import { MemoryRouter } from "react-router-dom";
+import { renderWithLoadingProvider } from "../shared/TestUtils/TestHelper";
 
 describe("MixcloudPlayer", () => {
   beforeAll(() => {
@@ -23,7 +24,7 @@ describe("MixcloudPlayer", () => {
   });
 
   it("uses the default props when none are provided (limit=2, variant='compact')", () => {
-    render(
+    renderWithLoadingProvider(
       <MemoryRouter>
         <MixcloudPlayer />
       </MemoryRouter>
@@ -37,12 +38,11 @@ describe("MixcloudPlayer", () => {
     vi.spyOn(hooks, "useMixcloudShows").mockReturnValue({
       shows: [],
       hasMore: false,
-      isLoading: false,
       offset: 0,
       error: new Error("Something went wrong"),
     });
 
-    render(<MixcloudPlayer />);
+    renderWithLoadingProvider(<MixcloudPlayer />);
 
     const errorMessage = screen.getByText(/mixcloudFetchError/i);
     expect(errorMessage).toBeInTheDocument();
@@ -55,11 +55,10 @@ describe("MixcloudPlayer", () => {
       shows: [],
       offset: offsetState,
       hasMore: true,
-      isLoading: false,
       error: new Error("Something went wrong"),
     }));
 
-    render(
+    renderWithLoadingProvider(
       <MemoryRouter>
         <MixcloudPlayer limit={2} variant="compact" />
       </MemoryRouter>
@@ -74,11 +73,10 @@ describe("MixcloudPlayer", () => {
       shows: [MOCK_DATA[0]],
       offset,
       hasMore: true,
-      isLoading: false,
       error: null,
     }));
 
-    render(
+    renderWithLoadingProvider(
       <MemoryRouter>
         <MixcloudPlayer limit={2} variant="compact" />
       </MemoryRouter>

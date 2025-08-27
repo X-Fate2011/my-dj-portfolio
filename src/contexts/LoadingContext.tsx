@@ -7,10 +7,15 @@ type LoadingContextType = {
   stopLoading: () => void;
 };
 
+type LoadingProviderProps = {
+  children: ReactNode;
+  initialLoading?: number;
+};
+
 const LoadingContext = createContext<LoadingContextType | null>(null);
 
-export function LoadingProvider({ children }: { children: ReactNode }) {
-  const [loadingCount, setLoadingCount] = useState(0);
+export function LoadingProvider({ children, initialLoading = 0 }: LoadingProviderProps) {
+  const [loadingCount, setLoadingCount] = useState(initialLoading);
   const [visible, setVisible] = useState(false);
 
   const startLoading = useCallback(() => setLoadingCount((count) => count + 1), []);
