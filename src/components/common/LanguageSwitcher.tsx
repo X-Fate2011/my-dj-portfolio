@@ -39,7 +39,7 @@ const LangButton = ({ lang, clickHandler, currentLang, t }: LangButtonProps) => 
       aria-label={t("header.switchLanguageAriaLabel", { lang: lang.toUpperCase() })}
       onClick={clickHandler}
       className={`px-2 py-1 rounded ${
-        currentLang === lang ? "bg-white text-black" : "bg-transparent"
+        currentLang === lang ? "bg-white text-black" : "text-white drop-shadow-md bg-transparent"
       }`}
     >
       {lang.toUpperCase()}
