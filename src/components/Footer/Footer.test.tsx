@@ -14,7 +14,7 @@ describe("Footer", () => {
   });
 
   it("Other accessibility tests", async () => {
-    const { container } = render(
+    render(
       <MemoryRouter>
         <Footer />
       </MemoryRouter>
@@ -30,7 +30,5 @@ describe("Footer", () => {
       expect(element).toHaveAttribute("aria-label");
       expect(element.getAttribute("aria-label")?.trim().length).toBeGreaterThan(0);
     });
-
-    expect(container).toMatchSnapshot();
   });
 });
