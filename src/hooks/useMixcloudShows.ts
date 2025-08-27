@@ -12,7 +12,8 @@ export function useMixcloudShows(currentOffset: number, limit: number = 2) {
   useEffect(() => {
     const controller = new AbortController();
     setIsLoading(true);
-    fetchMixcloudShows(currentOffset, limit, controller.signal).then((data) => {
+    fetchMixcloudShows(currentOffset, limit, controller.signal)
+      .then((data) => {
         setShows((prevShows) => [...prevShows, ...data.data]);
         setOffset((prevOffset) => prevOffset + limit);
         setHasMore(data.data.length === limit);
